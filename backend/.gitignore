@@ -12,3 +12,5 @@ reports/*
 !reports/.gitkeep
 *.db
 .DS_Store
+
+.vercel
