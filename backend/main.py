@@ -18,7 +18,7 @@ def create_app():
     app.config.from_object(Config)
 
     # Allow requests from React frontend (local + Firebase hosted)
-    CORS(app, resources={r"/api/*": {"origins": ["http://localhost:5173", "https://*.web.app", "https://*.firebaseapp.com"]}})
+    CORS(app, resources={r"/api/*": {"origins": ["http://localhost:5173", "https://*.web.app", "https://*.firebaseapp.com", "https://frontend-opal-five-74.vercel.app", "https://*.vercel.app"]}})
 
     # Initialize extensions
     db.init_app(app)
