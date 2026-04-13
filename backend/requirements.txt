@@ -10,3 +10,7 @@ python-dotenv
 PyJWT
 Werkzeug
 PyMySQL
+gunicorn
+tensorflow
+opencv-python-headless
+pandas

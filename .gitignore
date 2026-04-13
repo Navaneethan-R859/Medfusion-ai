@@ -19,3 +19,5 @@ backend/logs/*
 !backend/logs/.gitkeep
 .DS_Store
 *.db
+
+.vercel
