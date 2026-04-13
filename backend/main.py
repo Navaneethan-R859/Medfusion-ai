@@ -17,8 +17,8 @@ def create_app():
     # Load configuration
     app.config.from_object(Config)
 
-    # Allow requests from React frontend
-    CORS(app, resources={r"/api/*": {"origins": "http://localhost:5173"}})
+    # Allow requests from React frontend (local + Firebase hosted)
+    CORS(app, resources={r"/api/*": {"origins": ["http://localhost:5173", "https://*.web.app", "https://*.firebaseapp.com"]}})
 
     # Initialize extensions
     db.init_app(app)
