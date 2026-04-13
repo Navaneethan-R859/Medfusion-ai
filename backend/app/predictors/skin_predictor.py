@@ -1,6 +1,5 @@
 import os
 import numpy as np
-from tensorflow import keras
 from app.utils.image_processor import process_image
 
 
@@ -15,6 +14,7 @@ class SkinPredictor:
         if self.model is None:
             if not os.path.exists(self.model_path):
                 raise FileNotFoundError(f"Model not found at {self.model_path}")
+            from tensorflow import keras
             print("Loading Skin Model from:", self.model_path)
             self.model = keras.models.load_model(self.model_path, compile=False)
             print("Skin model loaded successfully!")

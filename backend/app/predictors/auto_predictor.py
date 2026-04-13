@@ -1,4 +1,3 @@
-import tensorflow as tf
 import numpy as np
 from PIL import Image
 import os
@@ -14,6 +13,7 @@ class AutoPredictor:
 
     def _load_model(self):
         if self.model is None:
+            import tensorflow as tf
             self.model = tf.keras.models.load_model(self.model_path)
 
     def predict(self, image_path):

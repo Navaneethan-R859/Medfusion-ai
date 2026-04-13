@@ -4,12 +4,9 @@ Flask-Cors
 Flask-JWT-Extended
 Flask-SQLAlchemy
 numpy
-pandas
 Pillow
-tensorflow
 reportlab
 python-dotenv
 PyJWT
 Werkzeug
-opencv-python-headless
 PyMySQL

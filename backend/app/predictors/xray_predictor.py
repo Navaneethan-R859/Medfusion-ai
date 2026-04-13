@@ -1,4 +1,3 @@
-import tensorflow as tf
 import numpy as np
 from PIL import Image
 import os
@@ -19,9 +18,11 @@ class XrayPredictor:
 
     def _load_models(self):
         if self.model is None:
+            import tensorflow as tf
             print("Loading Pneumonia Model:", self.model_path)
             self.model = tf.keras.models.load_model(self.model_path)
         if self.seg_model is None:
+            import tensorflow as tf
             print("Loading Segmentation Model:", self.seg_model_path)
             self.seg_model = tf.keras.models.load_model(self.seg_model_path, compile=False)
             print("Models loaded successfully!")
